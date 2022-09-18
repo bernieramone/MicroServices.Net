@@ -38,6 +38,7 @@ namespace PlatformService.API.Data
                         Name = "Python",
                         Publisher = "Python"
                     });
+                context.SaveChanges();
 
             }
             else
