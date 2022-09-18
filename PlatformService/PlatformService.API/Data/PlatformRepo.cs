@@ -22,7 +22,7 @@ namespace PlatformService.API.Data
         {
             var response = _context.Platforms.FirstOrDefault(p => p.Id == id);
 
-            if (response is null) throw new ArgumentNullException(nameof(id));
+            if (response is null) throw new ArgumentNullException(nameof(response));
             
             return response;
         }
@@ -32,7 +32,7 @@ namespace PlatformService.API.Data
             return _context.Platforms.ToList();
         }
 
-        public bool SaveChnages()
+        public bool SaveChanges()
         {
             var responseNumberOfStatesWritenInTheData = _context.SaveChanges();
 
